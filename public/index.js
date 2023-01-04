@@ -74,7 +74,7 @@
     aTag.title = 'Information';
     let confidence = response.confidence;
     let text = create('p');
-    if (confidence >= 85) {
+    if (confidence >= 60) {
       // console.log(response.text);
       // console.log(response.confidence);
       text.textContent = response.text;
