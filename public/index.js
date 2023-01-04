@@ -91,10 +91,7 @@
     let button = create('button');
     button.textContent = 'Copy to Clipboard';
     button.addEventListener('click', () => {
-      let copyText = text;
-      console.log(copyText.textContent);
-      navigator.clipboard.writeText(copyText.textContent);
-      alert('Copied to clipboard');
+      navigator.clipboard.writeText(text.textContent);
     });
     document.getElementById('text').append(text);
     document.getElementById('text').append(button);
