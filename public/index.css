@@ -1,0 +1,39 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#example {
+  display: flex;
+  background-color: #04395E;
+  color: white;
+  /* min-width: 100vw; */
+  /* margin-left: calc(50% - 50vw); */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #9cf1f2;
+  border-radius: 100%;
+  margin: auto;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+}
+
+#loading.display {
+  visibility: visible;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image to text</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Coda+Caption&family=Josefin+Sans&family=Lato:ital,wght@1,300&family=Lobster&family=Montserrat:wght@300&family=PT+Sans&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+  <form id="upload">
+    <label for="file">File to upload</label>
+    <input type="file" id="file" accept="image/*">
+    <button id="uploadButton" type="button">Upload</button>
+  </form>
+  <div id="loading"></div>
+  <div id="text"></div>
+</body>
+</html>
