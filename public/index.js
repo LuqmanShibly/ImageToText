@@ -74,6 +74,7 @@
     aTag.title = 'Information';
     let confidence = response.confidence;
     let text = create('p');
+    button.textContent = 'Copy to Clipboard';
     if (confidence >= 85) {
       // console.log(response.text);
       // console.log(response.confidence);
@@ -87,7 +88,16 @@
     }
     const loader = qs('#loading');
     loader.classList.remove('display');
+    // Copy to clipboard button
+    let button = create('button');
+    button.addEventListener('click', () => {
+      let copyText = text;
+      console.log(copyText.textContent);
+      navigator.clipboard.writeText(copyText.textContent);
+      alert('Copied to clipboard');
+    });
     document.getElementById('text').append(text);
+    document.getElementById('text').append(button);
     document.getElementById('text').append(aTag);
   }
 
